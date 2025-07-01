@@ -162,9 +162,6 @@ public class DatabaseConnection {
         config.setJdbcUrl(ServerConstants.DB_URL);
         config.setUsername(ServerConstants.DB_URL);
         config.setPassword(ServerConstants.DB_PASS);
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/lith_world?autoReconnect=true&useSSL=false");
-        config.setUsername("root");
-        config.setPassword("ascent");
 
         int poolSize = (int) Math.ceil(0.00202020202 * getNumberOfAccounts() + 9.797979798);
         if (poolSize < 10) {
