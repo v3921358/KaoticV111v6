@@ -362,9 +362,12 @@ public class ChannelServer {
         return dropRate;
     }
 
-    public static final void startChannel_Main() {
+    public static void startChannel_Main() {
         serverStartTime = System.currentTimeMillis();
-        newInstance(1).run_startup_configurations();
+        int count = Integer.parseInt(ServerProperties.getProperty("net.sf.odinms.channel.count", "1"));
+        for (int i = 0; i < count; i++) {
+            newInstance(i + 1).run_startup_configurations();
+        }
     }
 
     public Map<MapleSquadType, MapleSquad> getAllSquads() {
