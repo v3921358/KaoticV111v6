@@ -54,7 +54,6 @@ public class ServerConstants {//73.35.242.13
     //Inject a DLL that hooks SetupDiGetClassDevsExA and returns 0.
     public static final long UPDATE_INTERVAL = 777;
     public static final long PURGING_INTERVAL = 5 * 60 * 1000;
-    public static List<MapleClient> clients = new ArrayList<>();
     public static long pool = 0;
 
     /*
@@ -148,27 +147,6 @@ public class ServerConstants {//73.35.242.13
             e.printStackTrace();
             System.out.println("Failed to load configuration.ini.");
             System.exit(0);
-        }
-    }
-
-    public static List<MapleClient> getClients() {
-        List<MapleClient> chrz = new ArrayList<>(clients);
-        return chrz;
-    }
-
-    public static void addClient(MapleClient client) {
-        if (!clients.contains(client)) {
-            clients.add(client);
-        }
-    }
-
-    public static boolean getClient(MapleClient client) {
-        return clients.contains(client);
-    }
-
-    public static void removeClient(MapleClient client) {
-        if (clients.contains(client)) {
-            clients.remove(client);
         }
     }
 
