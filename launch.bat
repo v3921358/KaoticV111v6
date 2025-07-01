@@ -1,6 +1,5 @@
 @echo off
 @title Kaotic
-set PATH=C:\Program Files\Java\jdk-21\bin;%PATH%
 set CLASSPATH=.;dist\*;dist\lib\*
 java ^
     -Xms4G ^
