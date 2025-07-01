@@ -1,0 +1,15 @@
+﻿*.iml
+
+/logs/**
+.idea/
+/jre/
+
+/wz/
+
+# build files
+
+/build/
+/nbproject/
+
+/out
+*.onetoc2
